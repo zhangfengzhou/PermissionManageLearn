@@ -10,7 +10,8 @@
         android:id="@+id/btn_call_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:text="Call Phone" />
 
     <Button
@@ -29,4 +30,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="Next" />
+
+    <Button
+        android:id="@+id/btn_rxpermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_next"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="RxPermission" />
+
 </RelativeLayout>

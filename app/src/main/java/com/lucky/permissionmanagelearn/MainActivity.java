@@ -16,6 +16,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.lucky.permissionmanagelearn.rxpermission.RxPermissionActivity;
+
 /**
  * 注意：权限管理在Android 6.0之后才会有的 6.0之前没有做权限管理设置
  * 所以在应用的时候要考虑手机系统的版本
@@ -34,9 +36,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnCallPhone=(Button) findViewById(R.id.btn_call_phone);
         Button btnReadWrite= (Button) findViewById(R.id.btn_read_write);
         Button btnNext=(Button) findViewById(R.id.btn_next);
+        Button btnRxPermission = (Button) findViewById(R.id.btn_rxpermission);
         btnCallPhone.setOnClickListener(this);
         btnReadWrite.setOnClickListener(this);
         btnNext.setOnClickListener(this);
+        btnRxPermission.setOnClickListener(this);
     }
 
 
@@ -65,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                Intent intent=new Intent(this,SecondActivity.class);
                startActivity(intent);
                break;
+           case R.id.btn_rxpermission:
+               startActivity(new Intent(this, RxPermissionActivity.class));
        }
     }
 
